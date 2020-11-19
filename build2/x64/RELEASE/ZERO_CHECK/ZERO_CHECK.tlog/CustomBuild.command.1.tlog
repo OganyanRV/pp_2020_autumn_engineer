@@ -1,0 +1,10 @@
+^C:\USERS\OGROB\DESKTOP\PARAL\PP_2020_AUTUMN_ENGINEER\BUILD2\CMAKEFILES\930DDB05D9F548A04CE2D1CE1C40B753\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer -BC:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/build2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/build2/Project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

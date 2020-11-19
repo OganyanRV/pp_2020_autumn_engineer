@@ -1,0 +1,10 @@
+^C:\USERS\OGROB\DESKTOP\PARAL\PP_2020_AUTUMN_ENGINEER\MODULES\TASK_1\OGANYAN_R_LETTERS_AMOUNT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer -BC:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/build2 --check-stamp-file C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/build2/modules/task_1/oganyan_r_letters_amount/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

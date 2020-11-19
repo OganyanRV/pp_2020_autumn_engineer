@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\build2\CMakeFiles\bacce9450b168474dde12d2d890f631e\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{1DD36DC7-45E2-3AE5-8B3F-6CD6449CE75E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

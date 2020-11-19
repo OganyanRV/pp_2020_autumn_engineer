@@ -36,7 +36,7 @@ TEST(Parallel_Operations_MPI, Test_large) {
 }
 
 TEST(Parallel_Operations_MPI, Test_huge) {
-  CustomTest(1000);
+  CustomTest(1001);
 }
 
 int main(int argc, char** argv) {

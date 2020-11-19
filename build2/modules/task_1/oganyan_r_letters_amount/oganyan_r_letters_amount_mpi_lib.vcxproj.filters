@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\modules\task_1\oganyan_r_letters_amount\letters_amount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\modules\task_1\oganyan_r_letters_amount\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\modules\task_1\oganyan_r_letters_amount\letters_amount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\modules\task_1\oganyan_r_letters_amount\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{CC06EA62-ED03-3599-9E94-1736F9F7AC61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D7B06208-3249-3AF4-8182-7039B9DB88C7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="test_mpi_mpi"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\3rdparty\;CMake Files\3rdparty\gtest\;CMake Files\3rdparty\gtest\googlemock\;CMake Files\3rdparty\gtest\googlemock\cmake\;CMake Files\3rdparty\gtest\googletest\;CMake Files\3rdparty\gtest\googletest\cmake\;CMake Files\modules\;CMake Files\modules\reports\;CMake Files\modules\task_1\;CMake Files\modules\task_1\oganyan_r_letters_amount\;CMake Files\modules\task_2\;CMake Files\modules\task_2\oganyan_r_writers_readers\;CMake Files\modules\task_3\;CMake Files\modules\task_4\;CMake Files\modules\test_tasks\;CMake Files\modules\test_tasks\test_latex\;CMake Files\modules\test_tasks\test_mpi\;CMake Files\modules\test_tasks\test_omp\;CMake Files\modules\test_tasks\test_seq\;CMake Files\modules\test_tasks\test_std\;CMake Files\modules\test_tasks\test_tbb\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/modules/test_tasks/test_mpi"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_mpi_mpi">
+				<Option output="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/bin/test_mpi_mpi.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest-mpi/win"/>
+					<Add directory="C:/Program Files (x86)/Microsoft SDKs/MPI/Include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/unapproved"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 test_mpi_mpi"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_mpi_mpi/fast">
+				<Option output="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/bin/test_mpi_mpi.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest-mpi/win"/>
+					<Add directory="C:/Program Files (x86)/Microsoft SDKs/MPI/Include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/unapproved"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 test_mpi_mpi/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_mpi_mpi_lib">
+				<Option output="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/arch/test_mpi_mpi_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/modules/test_tasks/test_mpi"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest-mpi/win"/>
+					<Add directory="C:/Program Files (x86)/Microsoft SDKs/MPI/Include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/unapproved"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 test_mpi_mpi_lib"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_mpi_mpi_lib/fast">
+				<Option output="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/arch/test_mpi_mpi_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio/modules/test_tasks/test_mpi"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest-mpi/win"/>
+					<Add directory="C:/Program Files (x86)/Microsoft SDKs/MPI/Include"/>
+					<Add directory="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/unapproved"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 test_mpi_mpi_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer\cmake-build-debug-visual-studio\modules\test_tasks\test_mpi\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_mpi/main.cpp">
+			<Option target="test_mpi_mpi"/>
+			<Option target="test_mpi_mpi_lib"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_mpi/ops_mpi.cpp">
+			<Option target="test_mpi_mpi"/>
+			<Option target="test_mpi_mpi_lib"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_mpi/ops_mpi.h">
+			<Option target="test_mpi_mpi_lib"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake/Configure.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googlemock\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googletest\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/3rdparty/gtest/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\3rdparty\gtest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/reports/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\reports\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/task_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\task_1\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/task_1/oganyan_r_letters_amount/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\task_1\oganyan_r_letters_amount\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/task_2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\task_2\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/task_2/oganyan_r_writers_readers/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\task_2\oganyan_r_writers_readers\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/task_3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\task_3\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/task_4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\task_4\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\test_tasks\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_latex/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\test_tasks\test_latex\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_mpi/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\test_tasks\test_mpi\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_omp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\test_tasks\test_omp\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_seq/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\test_tasks\test_seq\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_std/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\test_tasks\test_std\"/>
+		</Unit>
+		<Unit filename="C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/modules/test_tasks/test_tbb/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\test_tasks\test_tbb\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,10 @@
+^C:\USERS\OGROB\DESKTOP\PARAL\PP_2020_AUTUMN_ENGINEER\3RDPARTY\GTEST\GOOGLEMOCK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer -BC:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/build2 --check-stamp-file C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/build2/3rdparty/gtest/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

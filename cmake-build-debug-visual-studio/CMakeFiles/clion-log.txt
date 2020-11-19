@@ -1,0 +1,32 @@
+"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -D USE_MPI=ON -G "CodeBlocks - NMake Makefiles" C:\Users\OgRob\Desktop\paral\pp_2020_autumn_engineer
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Parallel Programming Course
+-- Report
+-- Task 1
+-- -- oganyan_r_letters_amount_mpi
+-- Task 2
+-- -- oganyan_r_writers_readers_mpi
+-- Task 3
+-- Task 4
+-- Test task
+-- -- test_latex - NOT BUILD!
+-- -- test_mpi_mpi
+-- -- test_omp - NOT BUILD!
+-- -- test_seq - NOT BUILD!
+-- -- test_std - NOT BUILD!
+-- -- test_tbb - NOT BUILD!
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/OgRob/Desktop/paral/pp_2020_autumn_engineer/cmake-build-debug-visual-studio
