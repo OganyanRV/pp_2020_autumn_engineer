@@ -19,7 +19,7 @@ std::pair<std::function<double(dpair)>, std::function<dpair(dpair)>> Cur_fun(int
 }
 
 dpair GetStart(double x_left, double x_right,
-                      double y_left, double y_right) {
+               double y_left, double y_right) {
   dpair pos;
   std::random_device rd;
   std::mt19937 gen(rd());
@@ -31,13 +31,13 @@ dpair GetStart(double x_left, double x_right,
 }
 
 bool IsExtremum(const dpair& last, const dpair& cur,
-        const std::function<double(dpair)>& func, const double& eps) {
+                const std::function<double(dpair)>& func, const double& eps) {
   return std::abs(func(cur) - func(last)) < eps;
 }
 
 bool IsInside(dpair cur, double x_left, double x_right,
-                     double y_left, double y_right) {
-    return !(cur.x < x_left || cur.x < x_right || cur.y < y_left || cur.y >y_right);
+              double y_left, double y_right) {
+  return !(cur.x < x_left || cur.x < x_right || cur.y < y_left || cur.y >y_right);
 }
 
 dpair Calculate(dpair cur, dpair grad, double step) {
@@ -57,7 +57,7 @@ double MakeSimplefx(double x, dpair grad, dpair cur, const std::function<double(
 }
 
 double GoldenSelection(double a, double b, double eps, dpair gradient, dpair cur,
-            const std::function<double(dpair)>& func) {
+                       const std::function<double(dpair)>& func) {
   const double fi = 1.6180339887;
   double x1, x2;
   double y1, y2;
@@ -86,52 +86,21 @@ double GoldenSelection(double a, double b, double eps, dpair gradient, dpair cur
 }
 
 double SequentialGlobalSearch(int fun_num, double x_left, double x_right,
-                double y_left, double y_right, int repeat, double eps) {
-    auto cur_pair = Cur_fun(fun_num);
-    auto func { cur_pair.x };
-    auto grad { cur_pair.y };
+                              double y_left, double y_right, int repeat, double eps) {
+  auto cur_pair = Cur_fun(fun_num);
+  auto func { cur_pair.x };
+  auto grad { cur_pair.y };
+  double paral_ans {1e9};
+  //  Для параллельного метода
+  if (repeat == 2) {
+    int size;
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    dpair cur_pos {x_left, y_left};
+    dpair last_pos { cur_pos };
+    bool out_of_borders { false};
+    bool extremum_done { false };
 
-    //  Для параллельного метода
-    if (repeat == 2) {
-      dpair cur_pos {x_left, y_left};
-      dpair last_pos { cur_pos };
-      bool out_of_borders { false};
-      bool extremum_done { false };
-      double paral_ans {1e9};
-      while (repeat) {
-        do {
-          last_pos = cur_pos;
-          auto gradient_vec{grad(cur_pos)};
-          double new_step{GoldenSelection(0, 0.1, eps, gradient_vec, cur_pos, func)};
-          cur_pos = Calculate(cur_pos, gradient_vec, new_step);
-
-          out_of_borders = IsInside(cur_pos, x_left, x_right, y_left, y_right);
-          if (out_of_borders) {
-            break;
-          }
-
-          extremum_done = IsExtremum(last_pos, cur_pos, func, eps);
-          if (extremum_done) {
-            break;
-          }
-        } while (true);
-        --repeat;
-        if (extremum_done) {
-          paral_ans = std::min(paral_ans, func(cur_pos));
-        }
-        cur_pos = {x_right, y_right};
-        last_pos = cur_pos;
-      }
-      return paral_ans;
-    }
-
-    //  Для последовательного метода
-    double seq_ans { 1e9 };
     while (repeat) {
-      dpair cur_pos{GetStart(x_left, x_right, y_left, y_right)};
-      dpair last_pos{cur_pos};
-      bool out_of_borders{false};
-      bool extremum_done{false};
       do {
         last_pos = cur_pos;
         auto gradient_vec{grad(cur_pos)};
@@ -148,17 +117,50 @@ double SequentialGlobalSearch(int fun_num, double x_left, double x_right,
           break;
         }
       } while (true);
-
-      if (extremum_done) {
-        seq_ans = std::min(seq_ans, func(cur_pos));
-      }
       --repeat;
+      if (extremum_done) {
+        paral_ans = std::min(paral_ans, func(cur_pos));
+      }
+      cur_pos = {x_right, y_right};
+      last_pos = cur_pos;
     }
-    return seq_ans;
+    repeat = 500 / ( 4 * size);
+  }
+
+  //  Для последовательного метода
+  double seq_ans { 1e9 };
+  while (repeat) {
+    dpair cur_pos{GetStart(x_left, x_right, y_left, y_right)};
+    dpair last_pos{cur_pos};
+    bool out_of_borders{false};
+    bool extremum_done{false};
+    do {
+      last_pos = cur_pos;
+      auto gradient_vec{grad(cur_pos)};
+      double new_step{GoldenSelection(0, 0.1, eps, gradient_vec, cur_pos, func)};
+      cur_pos = Calculate(cur_pos, gradient_vec, new_step);
+
+      out_of_borders = IsInside(cur_pos, x_left, x_right, y_left, y_right);
+      if (out_of_borders) {
+        break;
+      }
+
+      extremum_done = IsExtremum(last_pos, cur_pos, func, eps);
+      if (extremum_done) {
+        break;
+      }
+    } while (true);
+
+    if (extremum_done) {
+      seq_ans = std::min(seq_ans, func(cur_pos));
+    }
+    --repeat;
+  }
+  return std::min(seq_ans, paral_ans);
 }
 
 double ParallelGlobalSearch(int fun_num,
-    double x_left, double x_right, double y_left, double y_right) {
+                            double x_left, double x_right, double y_left, double y_right) {
 
   int size, rank;
   MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -190,7 +192,7 @@ double ParallelGlobalSearch(int fun_num,
     }
   }
 
-    //  Рассылка данных
+  //  Рассылка данных
   if (rank == 0) {
     int cur_step = 0;
     for (int i = 1; i < rank; ++i) {
@@ -218,8 +220,8 @@ double ParallelGlobalSearch(int fun_num,
   int cnt = 0;
   while (cnt != 4) {
     local_min = std::min(local_min, SequentialGlobalSearch(fun_num,
-        proc_data[4 * cnt], proc_data[4 * cnt + 2],
-        proc_data[4 * cnt + 1], proc_data[4 * cnt + 3]));
+                                                           proc_data[4 * cnt], proc_data[4 * cnt + 2],
+                                                           proc_data[4 * cnt + 1], proc_data[4 * cnt + 3]));
     ++cnt;
   }
   MPI_Reduce(&local_min, &global_min, 1, MPI_DOUBLE, MPI_MIN, 0, MPI_COMM_WORLD);
