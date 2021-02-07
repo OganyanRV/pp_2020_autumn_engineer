@@ -70,11 +70,12 @@ int library(int op_cnt) {
     int cur_op = 0;
     int data = 0;
     int arereading = 0;
+    int arewriting = 0;
     int request;
     MPI_Status status;
     while (cur_op != op_cnt) {
         MPI_Recv(&request, 1, MPI_INT, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
-        if (arereading == 0) {
+        if (arereading == 0 && arewriting == 0) {
             access_wr = 1;
         }
         if (status.MPI_TAG == WRITE_TAG) {
@@ -82,6 +83,7 @@ int library(int op_cnt) {
             if (access_wr) {
                 access = 1;
                 access_wr = access_rd = 0;
+                ++arewriting;
                 MPI_Send(&access, 1, MPI_INT, status.MPI_SOURCE, ANY_TAG, MPI_COMM_WORLD);
             } else {
                 MPI_Send(&access, 1, MPI_INT, status.MPI_SOURCE, ANY_TAG, MPI_COMM_WORLD);
@@ -91,6 +93,7 @@ int library(int op_cnt) {
             data = request;
             //  std::cout << "The new data is" << data << std::endl;
             access_rd = access_wr = 1;
+            --arewriting;
             ++cur_op;
         } else if (status.MPI_TAG == READ_TAG) {
             access = 0;
